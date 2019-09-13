@@ -1,0 +1,53 @@
+@import "variables";
+
+mat-card {
+  border-radius: 10px;
+  width: 300px;
+  min-height: 330px;
+
+  @media screen and (max-width: 959px) {
+    width: 400px;
+  }
+
+  @media screen and (max-width: 425px) {
+    width: 90%;
+  }
+}
+
+.content {
+  position: relative;
+}
+
+.floating {
+  position: absolute;
+  top: 116px;
+  right: 10px;
+}
+
+.card-content {
+  max-width: $max-content-width;
+  min-width: $max-content-width;
+
+  @media screen and (max-width: 1120px) {
+    min-width: unset;
+  }
+
+  @media screen and (max-width: 959px) {
+    width: 400px;
+  }
+
+  @media screen and (max-width: 425px) {
+    width: 100%;
+    padding: 0 10px;
+  }
+
+  p {
+    margin: 30px 10px 10px;
+  }
+
+  margin-bottom: 15px;
+}
+
+.image {
+  height: 128px;
+}

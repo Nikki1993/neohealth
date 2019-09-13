@@ -1,0 +1,54 @@
+<div class="content" fxLayoutAlign="center">
+  <mat-card class="card" fxLayout="column" fxLayoutAlign="space-between start">
+    <mat-toolbar
+      class="mat-elevation-z3 titlebar"
+      color="primary"
+      fxLayoutAlign="center center"
+    >
+      <h1>{{ values.title }}</h1>
+    </mat-toolbar>
+    <div
+      class="about-content"
+      fxLayout="row"
+      fxLayout.lt-md="column"
+      fxLayoutAlign="space-between start"
+    >
+      <div fxFlex class="image" fxFlexAlign="center">
+        <picture>
+          <source type="image/webp" srcset="assets/logo.webp" />
+          <source type="image/png" srcset="assets/logo.png" />
+          <img src="assets/logo.png" alt="logo" />
+        </picture>
+      </div>
+      <div
+        fxFlex="100"
+        fxFlex.gt-sm="60"
+        fxLayout="column"
+        fxLayoutAlign="center start"
+        fxLayoutGap="5px"
+        fxLayoutGap.gt-xs="30px"
+      >
+        <div class="write">
+          <div>
+            {{ values.description }}
+          </div>
+          <div #read>
+            <br />
+            {{ values.extended }}
+          </div>
+        </div>
+        <div class="actions">
+          <button
+            class="read-more"
+            (click)="readMore()"
+            mat-button
+            mat-raised-button
+            color="primary"
+          >
+            {{ values.button }}
+          </button>
+        </div>
+      </div>
+    </div>
+  </mat-card>
+</div>

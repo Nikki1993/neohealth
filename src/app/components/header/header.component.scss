@@ -1,0 +1,23 @@
+@import "variables";
+
+:host {
+  position: fixed;
+  width: 100%;
+  z-index: 1000;
+}
+
+.navigation, .mat-toolbar {
+  height: 64px;
+}
+
+.max-width {
+  max-width: $max-content-width;
+  overflow-y: hidden;
+}
+
+.logo-text {
+  font-family: 'Caveat', cursive;
+  font-size: 24px;
+  align-self: center;
+  padding-right: 10px;
+}

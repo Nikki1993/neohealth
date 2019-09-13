@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Neohealth</title>
+    <base href="/" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#455A64" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="#d4dae8" />
+    <link rel="icon" type="image/x-icon" href="favicon.ico" />
+    <meta name="description" content="A new beginning for your skin!" />
+    <meta
+      name="keywords"
+      content="face,body,hand,massage,fat,hiro,care,treatment"
+    />
+    <meta name="author" content="Nick Kononov" />
+    <link rel="preconnect" href="https://firestore.googleapis.com" />
+    <link
+      rel="preload"
+      href="assets/fonts/material-icons.woff2"
+      as="font"
+      crossorigin
+    />
+    <link
+      rel="preload"
+      href="assets/fonts/subset-Caveat-Bold.woff2"
+      as="font"
+      crossorigin
+    />
+    <link
+      rel="preload"
+      href="assets/fonts/subset-Caveat-Regular.woff2"
+      as="font"
+      crossorigin
+    />
+    <link
+      rel="preload"
+      href="assets/fonts/subset-Raleway-Bold.woff2"
+      as="font"
+      crossorigin
+    />
+    <link
+      rel="preload"
+      href="assets/fonts/subset-Raleway-Regular.woff2"
+      as="font"
+      crossorigin
+    />
+    <link
+      rel="preload"
+      href="assets/fonts/subset-PlayfairDisplay-Bold.woff2"
+      as="font"
+      crossorigin
+    />
+    <link
+      rel="preload"
+      href="assets/fonts/subset-PlayfairDisplay-Regular.woff2"
+      as="font"
+      crossorigin
+    />
+    <link
+      rel="preload"
+      href="assets/fonts/subset-SourceSansPro-Bold.woff2"
+      as="font"
+      crossorigin
+    />
+    <link
+      rel="preload"
+      href="assets/fonts/subset-SourceSansPro-Regular.woff2"
+      as="font"
+      crossorigin
+    />
+    <link
+      rel="preload"
+      href="assets/fonts/subset-Vollkorn-Regular.woff2"
+      as="font"
+      crossorigin
+    />
+    <link
+      rel="preload"
+      href="assets/fonts/subset-Vollkorn-Bold.woff2"
+      as="font"
+      crossorigin
+    />
+    <link
+      rel="prefetch"
+      href="assets/fonts/subset-UbuntuMono-Regular.woff2"
+      as="font"
+      crossorigin
+    />
+    <link
+      rel="prefetch"
+      href="assets/fonts/subset-UbuntuMono-Bold.woff2"
+      as="font"
+      crossorigin
+    />
+    <link rel="manifest" href="manifest.json" />
+  </head>
+
+  <body>
+    <app-root>
+      <style>
+        app-root {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          height: 100vh;
+
+          color: #333;
+          font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
+            Oxygen-Sans, Ubuntu, Cantarell, Helvetica, sans-serif;
+          font-size: 2.5em;
+        }
+        body {
+          background: #d4dae8;
+          margin: 0;
+          padding: 0;
+        }
+
+        @keyframes dots {
+          50% {
+            transform: translateY(-0.4rem);
+          }
+          100% {
+            transform: translateY(0);
+          }
+        }
+
+        .d {
+          animation: dots 1.5s ease-out infinite;
+        }
+        .d-2 {
+          animation-delay: 0.5s;
+        }
+        .d-3 {
+          animation-delay: 1s;
+        }
+      </style>
+
+      Neohealth<span class="d">.</span><span class="d d-2">.</span
+      ><span class="d d-3">.</span>
+    </app-root>
+    <noscript>
+      Please enable Javascript in order to view the website
+    </noscript>
+  </body>
+</html>

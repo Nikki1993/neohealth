@@ -1,0 +1,53 @@
+.content {
+  * {
+    font-family: "Ubuntu Mono", monospace;
+  }
+
+  .item-desc {
+    font-family: "Source Sans Pro", sans-serif;
+    font-weight: normal;
+    font-style: normal;
+  }
+}
+
+.mat-list {
+  overflow: auto;
+  height: 400px;
+
+  .mat-list-item {
+    height: initial;
+    padding: 5px 0;
+  }
+}
+
+.price-content {
+  max-width: 200px;
+}
+
+.color {
+  color: #356859;
+}
+
+.dots::before {
+  display: inline-block;
+  height: 1em;
+  overflow: hidden;
+  padding: 0 1em;
+  text-overflow: clip;
+  content: ". . . . . . . . . . . . . . . . . . . . "
+    ". . . . . . . . . . . . . . . . . . . . "
+    ". . . . . . . . . . . . . . . . . . . . "
+    ". . . . . . . . . . . . . . . . . . . . ";
+  vertical-align: super;
+}
+
+.close {
+  position: absolute;
+  top: -20px;
+  right: -20px;
+}
+
+.bold {
+  font-weight: 700;
+  padding-bottom: 5px;
+}

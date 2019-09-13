@@ -1,0 +1,32 @@
+@import "variables";
+
+.content {
+  max-width: $max-content-width - 100px;
+  min-width: $max-content-width - 100px;
+  padding-top: 40px;
+
+  @media screen and (max-width: 1120px) {
+    min-width: unset;
+  }
+
+  @media screen and (max-width: 959px) {
+    width: 400px;
+    text-align: center;
+  }
+
+  @media screen and (max-width: 425px) {
+    width: 100%;
+    text-align: center;
+  }
+}
+
+.slideshow {
+  width: 100%;
+}
+
+.background {
+  margin: -80px 0;
+  padding: 80px 30px;
+  background: $branding-color;
+  min-height: 500px;
+}

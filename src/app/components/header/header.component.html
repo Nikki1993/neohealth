@@ -1,0 +1,20 @@
+<mat-toolbar color="primary" fxLayout="row" fxLayoutAlign="center center" class="mat-elevation-z8">
+  <div fxLayout="row" fxFlex fxLayoutAlign="space-between stretch" class="navigation max-width">
+    <div fxLayout="row" fxFlexAlign="start stretch" fxFlex="nogrow" class="size-nav">
+      <div fxFlexAlign="center">
+        <span class="logo-text">Neohealth</span>
+      </div>
+    </div>
+    <div fxLayout="row" fxLayoutAlign="space-around center">
+      <button mat-icon-button="" (click)="this.changeLanguage('english')">
+        <mat-icon svgIcon="english"></mat-icon>
+      </button>
+      <button mat-icon-button (click)="this.changeLanguage('finnish')">
+        <mat-icon svgIcon="finnish"></mat-icon>
+      </button>
+      <button mat-icon-button (click)="this.changeLanguage('russian')">
+        <mat-icon svgIcon="russian"></mat-icon>
+      </button>
+    </div>
+  </div>
+</mat-toolbar>

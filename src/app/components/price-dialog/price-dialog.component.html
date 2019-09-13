@@ -1,0 +1,11 @@
+<mat-list>
+  <mat-list-item class="content" *ngFor="let item of data">
+    <div class="price-content">
+      <div class="bold color">{{item.name}}</div>
+      <div class="item-desc">{{item.description}}</div>
+    </div>
+    <div fxFlex class="dots color"></div>
+    <div class="color">{{item.price}}€</div>
+  </mat-list-item>
+  <button mat-fab color="inherit" class="close" (click)="close()"><mat-icon>close</mat-icon></button>
+</mat-list>

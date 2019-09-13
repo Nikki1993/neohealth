@@ -1,0 +1,59 @@
+@import "variables";
+
+.header {
+  position: relative;
+  height: 700px;
+  overflow: auto;
+  margin: -80px 0;
+  padding: 80px 0;
+}
+
+.header-content {
+  text-align: center;
+  // text-transform: uppercase;
+  font-weight: 100;
+
+  * {
+    font-family: 'Playfair Display', sans-serif;
+  }
+
+  h3 {
+    font-size: 18px;
+    letter-spacing: 4px;
+  }
+
+  .border {
+    max-width: 650px;
+    width: 100%;
+    border-top: $branding-color 6px solid;
+    border-bottom: $branding-color 6px solid;
+   }
+
+  span {
+    font-size: 64px;
+  }
+
+  // TODO: remove this shit
+
+  .start {
+    // font-weight: bold;
+  }
+
+  .ending {
+    font-weight: normal;
+    // letter-spacing: 10px;
+  }
+
+  .background-common {
+    background: $branding-color;
+    width: 200px;
+  }
+
+  .background-up {
+    @extend .background-common;
+  }
+
+  .background-down {
+    @extend .background-common;
+  }
+}

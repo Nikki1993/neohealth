@@ -1,0 +1,136 @@
+/* You can add global styles to this file, and also import other style files */
+
+@import 'variables';
+
+.general-font {
+  font-family: 'Source Sans Pro', sans-serif;
+  font-weight: normal;
+  font-style: normal;
+}
+
+.header-1 {
+  font-family: 'Playfair Display', serif;
+  font-weight: 300;
+  font-style: normal;
+}
+
+.header-2-3-4 {
+  font-family: 'Vollkorn', serif;
+  font-weight: 300;
+  font-style: normal;
+}
+
+.no-webp html,
+body {
+  @extend .general-font;
+  background: url('/assets/background/bloom.png') repeat;
+}
+
+.webp html,
+body {
+  @extend .general-font;
+  background: url('/assets/background/bloom.webp') repeat;
+}
+
+h1 {
+  @extend .header-1;
+}
+
+h2,
+h3,
+h4 {
+  @extend .header-2-3-4;
+}
+
+div,
+p,
+span {
+  @extend .general-font;
+}
+
+.mat-dialog-title {
+  @extend .header-1;
+}
+
+.mat-card-header {
+  .mat-card-title {
+    font-size: 20px;
+  }
+
+  .mat-card-subtitle {
+    @extend .header-2-3-4;
+  }
+}
+.mat-card-content {
+  @extend .general-font;
+}
+
+.mat-card-title {
+  @extend .header-1;
+}
+
+.panel-browser {
+  .mat-dialog-container {
+    border-radius: 25px;
+    z-index: 1;
+    background: linear-gradient(
+      $warning-gradient-start,
+      $warning-gradient-finish
+    );
+    color: $text-color-light;
+  }
+
+  .mat-dialog-content {
+    overflow: initial;
+    width: 100%;
+  }
+
+  app-dialog {
+    display: flex;
+    height: 100%;
+    position: relative;
+    flex-direction: column;
+  }
+}
+
+.spacer {
+  flex: 1;
+}
+
+.backdrop-browser {
+  background: linear-gradient(
+    $backdrop-browser-gradient-start,
+    $backdrop-browser-gradient-finish
+  );
+}
+
+.mat-button {
+  font-family: 'Vollkorn', serif;
+  font-size: 16px;
+}
+
+.price-list {
+  .mat-dialog-container {
+    border-radius: 25px;
+    z-index: 1;
+    background: #fffbe6;
+    color: #356859;
+    position: relative;
+    display: inline-table;
+  }
+
+  .mat-dialog-content {
+    width: 100%;
+  }
+}
+
+p {
+  line-height: 1.5;
+}
+
+button:focus {
+  outline: none;
+}
+::-moz-focus-inner {
+  border: 0;
+}

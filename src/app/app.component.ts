@@ -2,12 +2,9 @@ import { Component, OnInit } from "@angular/core";
 import { DeviceDetectorService } from "ngx-device-detector";
 import { MatDialog } from "@angular/material/dialog";
 import { WarningDialogComponent } from "./components/warning-dialog/warning-dialog.component";
-import { setupPage } from "csstips/lib";
 import { TranslateService } from "@ngx-translate/core";
 import { BehaviorSubject } from "rxjs";
 import { ServiceWorkerUpdateService } from "./services/service-worker-update.service";
-
-setupPage("#root");
 
 @Component({
   selector: "app-root",

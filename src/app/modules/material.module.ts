@@ -9,6 +9,7 @@ import { MatMenuModule } from "@angular/material/menu";
 import { MatSnackBarModule } from "@angular/material/snack-bar";
 import { MatToolbarModule } from "@angular/material/toolbar";
 import { MatTooltipModule } from "@angular/material/tooltip";
+import { ScrollingModule} from '@angular/cdk/scrolling';
 
 import { NgModule } from "@angular/core";
 
@@ -24,6 +25,7 @@ const modules = [
   MatDividerModule,
   MatListModule,
   MatGridListModule,
+  ScrollingModule
 ];
 
 @NgModule({

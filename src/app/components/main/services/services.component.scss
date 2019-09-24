@@ -1,53 +1,119 @@
 @import "variables";
+//
+//mat-card {
+//  border-radius: 10px;
+//  width: 300px;
+//  min-height: 330px;
+//
+//  @media screen and (max-width: 959px) {
+//    width: 400px;
+//  }
+//
+//  @media screen and (max-width: 425px) {
+//    width: 90%;
+//  }
+//}
+//
+//.content {
+//  position: relative;
+//}
+//
+//.floating {
+//  position: absolute;
+//  top: 116px;
+//  right: 10px;
+//}
+//
+//.card-content {
+//  max-width: $max-content-width;
+//  min-width: $max-content-width;
+//
+//  @media screen and (max-width: 1120px) {
+//    min-width: unset;
+//  }
+//
+//  @media screen and (max-width: 959px) {
+//    width: 400px;
+//  }
+//
+//  @media screen and (max-width: 425px) {
+//    width: 100%;
+//    padding: 0 10px;
+//  }
+//
+//  p {
+//    margin: 30px 10px 10px;
+//  }
+//
+//  margin-bottom: 15px;
+//}
+//
+//.image {
+//  height: 128px;
+//}
+
+.root {
+  max-width: 1100px;
+  margin: 0 auto;
+}
 
 mat-card {
-  border-radius: 10px;
-  width: 300px;
-  min-height: 330px;
-
-  @media screen and (max-width: 959px) {
-    width: 400px;
-  }
-
-  @media screen and (max-width: 425px) {
-    width: 90%;
-  }
+  border-radius: 20px;
 }
 
 .content {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+
+  .bottom {
+    height: 100%;
+    line-height: 1.4;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+.price {
+  font-size: 36px;
+  font-weight: bold;
+}
+
+.header {
+  font-size: 48px;
+  text-align: center;
+  margin: 10px auto;
+}
+
+.border {
+  margin: 5px 0;
+  border-bottom: 3px solid $primary;
+}
+
+.title {
+  text-align: center;
+}
+
+.simple-scrollbar {
+  margin: 10px;
+}
+
+.scrolling-wrapper {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
   position: relative;
-}
+  -webkit-overflow-scrolling: touch;
 
-.floating {
-  position: absolute;
-  top: 116px;
-  right: 10px;
-}
-
-.card-content {
-  max-width: $max-content-width;
-  min-width: $max-content-width;
-
-  @media screen and (max-width: 1120px) {
-    min-width: unset;
+  .card {
+    text-align: center;
+    flex: 0 0 auto;
+    margin: 10px;
+    min-height: 200px;
+    height: auto;
+    width: 250px;
+    background-size: cover;
+    background: url("/assets/texture.jpg") no-repeat center;
   }
-
-  @media screen and (max-width: 959px) {
-    width: 400px;
-  }
-
-  @media screen and (max-width: 425px) {
-    width: 100%;
-    padding: 0 10px;
-  }
-
-  p {
-    margin: 30px 10px 10px;
-  }
-
-  margin-bottom: 15px;
-}
-
-.image {
-  height: 128px;
 }

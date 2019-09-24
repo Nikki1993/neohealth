@@ -14,6 +14,7 @@ import { AngularFirePerformanceModule } from '@angular/fire/performance';
 import { DeviceDetectorModule } from 'ngx-device-detector';
 import { SlideshowModule } from 'ng-simple-slideshow';
 import { ServiceWorkerModule } from '@angular/service-worker';
+import { SimplebarAngularModule } from 'simplebar-angular';
 
 import { environment } from '../environments/environment';
 import { AppComponent } from './app.component';
@@ -64,7 +65,8 @@ import 'firebase/performance';
         deps: [AngularFirestore]
       }
     }),
-    SlideshowModule
+    SlideshowModule,
+    SimplebarAngularModule
   ],
   entryComponents: [WarningDialogComponent, PriceDialogComponent],
   providers: [

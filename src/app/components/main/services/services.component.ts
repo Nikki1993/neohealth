@@ -16,7 +16,7 @@ interface ITranslatationValue {
   icon?: string;
   subtitle?: string;
   title?: string;
-  prices?: ITranslatationValue[];
+  prices?: ITranslationPrices[];
 }
 
 @Component({
@@ -27,6 +27,10 @@ interface ITranslatationValue {
 
 export class ServicesComponent implements OnInit {
   values: ITranslatationValue[] = [];
+  options = {
+    autoHide: false,
+    forceVisible: true
+  };
 
   constructor(
     private matIconRegistery: MatIconRegistry,
@@ -48,7 +52,7 @@ export class ServicesComponent implements OnInit {
     });
   }
 
-  showPrices(prices: ITranslationPrices) {
+  showPrices(prices: ITranslationPrices[]) {
     this.dialog.open(PriceDialogComponent, {
       width: "450px",
       height: "400px",

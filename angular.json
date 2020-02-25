@@ -43,7 +43,11 @@
             "polyfills": "src/polyfills.ts",
             "tsConfig": "src/tsconfig.app.json",
             "es5BrowserSupport": true,
-            "assets": ["src/favicon.ico", "src/assets", "src/manifest.json"],
+            "assets": [
+              "src/favicon.ico",
+              "src/assets",
+              "src/manifest.json"
+            ],
             "styles": [
               "node_modules/normalize.css/normalize.css",
               "src/fonts.css",
@@ -51,9 +55,13 @@
               "src/styles.scss"
             ],
             "stylePreprocessorOptions": {
-              "includePaths": ["src"]
+              "includePaths": [
+                "src"
+              ]
             },
-            "scripts": ["src/webp-detection.js"]
+            "scripts": [
+              "src/webp-detection.js"
+            ]
           },
           "configurations": {
             "hmr": {
@@ -129,16 +137,27 @@
             "polyfills": "src/polyfills.ts",
             "tsConfig": "src/tsconfig.spec.json",
             "karmaConfig": "src/karma.conf.js",
-            "styles": ["src/styles.scss"],
+            "styles": [
+              "src/styles.scss"
+            ],
             "scripts": [],
-            "assets": ["src/favicon.ico", "src/assets", "src/manifest.json"]
+            "assets": [
+              "src/favicon.ico",
+              "src/assets",
+              "src/manifest.json"
+            ]
           }
         },
         "lint": {
           "builder": "@angular-devkit/build-angular:tslint",
           "options": {
-            "tsConfig": ["src/tsconfig.app.json", "src/tsconfig.spec.json"],
-            "exclude": ["**/node_modules/**"]
+            "tsConfig": [
+              "src/tsconfig.app.json",
+              "src/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
           }
         }
       }
@@ -158,7 +177,9 @@
           "builder": "@angular-devkit/build-angular:tslint",
           "options": {
             "tsConfig": "e2e/tsconfig.e2e.json",
-            "exclude": ["**/node_modules/**"]
+            "exclude": [
+              "**/node_modules/**"
+            ]
           }
         }
       }
@@ -166,6 +187,7 @@
   },
   "defaultProject": "angular-neohealth",
   "cli": {
-    "packageManager": "yarn"
+    "packageManager": "yarn",
+    "analytics": "b577a5f3-206e-4bc9-93bc-232fae36c076"
   }
 }

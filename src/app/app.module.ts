@@ -1,35 +1,35 @@
-import { HttpClientModule } from '@angular/common/http';
-import { NgModule } from '@angular/core';
-import { FlexLayoutModule } from '@angular/flex-layout';
-import { BrowserModule } from '@angular/platform-browser';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
-import { AngularFireModule } from '@angular/fire';
+import { HttpClientModule } from "@angular/common/http";
+import { NgModule } from "@angular/core";
+import { FlexLayoutModule } from "@angular/flex-layout";
+import { BrowserModule } from "@angular/platform-browser";
+import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
+import { TranslateLoader, TranslateModule } from "@ngx-translate/core";
+import { AngularFireModule } from "@angular/fire";
 import {
   AngularFirestore,
   AngularFirestoreModule,
-  FirestoreSettingsToken
-} from '@angular/fire/firestore';
-import { AngularFirePerformanceModule } from '@angular/fire/performance';
-import { DeviceDetectorModule } from 'ngx-device-detector';
-import { SlideshowModule } from 'ng-simple-slideshow';
-import { ServiceWorkerModule } from '@angular/service-worker';
+  SETTINGS,
+} from "@angular/fire/firestore";
+import { AngularFirePerformanceModule } from "@angular/fire/performance";
+import { DeviceDetectorModule } from "ngx-device-detector";
+import { SlideshowModule } from "ng-simple-slideshow";
+import { ServiceWorkerModule } from "@angular/service-worker";
 
-import { environment } from '../environments/environment';
-import { AppComponent } from './app.component';
-import { WarningDialogComponent } from './components/warning-dialog/warning-dialog.component';
-import { HeaderComponent } from './components/header/header.component';
-import { MainComponent } from './components/main/main.component';
-import { StoreTransLoader } from './firebase/firestore.loader';
-import { NeohealthMaterialModule } from './modules/material.module';
-import { HomeComponent } from './components/main/home/home.component';
-import { ServicesComponent } from './components/main/services/services.component';
-import { BrandComponent } from './components/main/brand/brand.component';
-import { AboutComponent } from './components/main/about/about.component';
-import { PriceDialogComponent } from './components/price-dialog/price-dialog.component';
-import { ContactComponent } from './components/main/contact/contact.component';
+import { environment } from "../environments/environment";
+import { AppComponent } from "./app.component";
+import { WarningDialogComponent } from "./components/warning-dialog/warning-dialog.component";
+import { HeaderComponent } from "./components/header/header.component";
+import { MainComponent } from "./components/main/main.component";
+import { StoreTransLoader } from "./firebase/firestore.loader";
+import { NeohealthMaterialModule } from "./modules/material.module";
+import { HomeComponent } from "./components/main/home/home.component";
+import { ServicesComponent } from "./components/main/services/services.component";
+import { BrandComponent } from "./components/main/brand/brand.component";
+import { AboutComponent } from "./components/main/about/about.component";
+import { PriceDialogComponent } from "./components/price-dialog/price-dialog.component";
+import { ContactComponent } from "./components/main/contact/contact.component";
 
-import 'firebase/performance';
+import "firebase/performance";
 
 @NgModule({
   declarations: [
@@ -42,13 +42,13 @@ import 'firebase/performance';
     BrandComponent,
     AboutComponent,
     PriceDialogComponent,
-    ContactComponent
+    ContactComponent,
   ],
   imports: [
     BrowserModule,
     HttpClientModule,
-    ServiceWorkerModule.register('/ngsw-worker.js', {
-      enabled: environment.production
+    ServiceWorkerModule.register("/ngsw-worker.js", {
+      enabled: environment.production,
     }),
     BrowserAnimationsModule,
     NeohealthMaterialModule,
@@ -61,16 +61,13 @@ import 'firebase/performance';
       loader: {
         provide: TranslateLoader,
         useFactory: StoreTransLoader,
-        deps: [AngularFirestore]
-      }
+        deps: [AngularFirestore],
+      },
     }),
-    SlideshowModule
+    SlideshowModule,
   ],
   entryComponents: [WarningDialogComponent, PriceDialogComponent],
-  providers: [
-    AngularFirestore,
-    { provide: FirestoreSettingsToken, useValue: {} }
-  ],
-  bootstrap: [AppComponent]
+  providers: [AngularFirestore, { provide: SETTINGS, useValue: {} }],
+  bootstrap: [AppComponent],
 })
 export class AppModule {}

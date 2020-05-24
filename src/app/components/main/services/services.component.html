@@ -1,20 +1,31 @@
 <div class="content" fxLayout="column" fxFlexAlign="center">
   <div fxFlex fxFlexAlign="center">
-    <div class="card-content" fxLayout="row" fxLayout.lt-md="column" fxLayoutAlign="space-around center"
-         fxLayoutAlign.lt-md="space-around center" fxLayoutGap="15px">
+    <div
+      class="card-content"
+      fxLayout="row"
+      fxLayout.lt-md="column"
+      fxLayoutAlign="space-around center"
+      fxLayoutAlign.lt-md="space-around center"
+      fxLayoutGap="15px"
+    >
       <mat-card class="card" *ngFor="let item of values">
         <div fxLayout="row" fxLayoutAlign="space-around center">
-          <img mat-card-md-image class="image" [src]="item.icon" alt="temp"/>
+          <img mat-card-md-image class="image" [src]="item.icon" alt="temp" />
           <mat-card-header>
-            <mat-card-title>{{item.title}}</mat-card-title>
-            <mat-card-subtitle>{{item.subtitle}}</mat-card-subtitle>
+            <mat-card-title>{{ item.title }}</mat-card-title>
+            <mat-card-subtitle>{{ item.subtitle }}</mat-card-subtitle>
           </mat-card-header>
         </div>
         <mat-divider></mat-divider>
         <mat-card-content>
-          <p>{{item.description}}</p>
+          <p>{{ item.description }}</p>
         </mat-card-content>
-        <button class="floating" color="primary" (click)="showPrices(item.prices)" mat-fab>
+        <button
+          class="floating"
+          color="primary"
+          (click)="showPrices(item.prices)"
+          mat-fab
+        >
           <mat-icon svgIcon="money"></mat-icon>
         </button>
       </mat-card>

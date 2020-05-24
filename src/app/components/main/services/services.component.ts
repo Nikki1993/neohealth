@@ -22,9 +22,8 @@ interface ITranslatationValue {
 @Component({
   selector: "app-services",
   templateUrl: "./services.component.html",
-  styleUrls: ["./services.component.scss"]
+  styleUrls: ["./services.component.scss"],
 })
-
 export class ServicesComponent implements OnInit {
   values: ITranslatationValue[] = [];
 
@@ -43,9 +42,11 @@ export class ServicesComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.translate.stream("services").subscribe((values: ITranslatationValue[]) => {
-      this.values = values;
-    });
+    this.translate
+      .stream("services")
+      .subscribe((values: ITranslatationValue[]) => {
+        this.values = values;
+      });
   }
 
   showPrices(prices: ITranslationPrices) {
@@ -54,7 +55,7 @@ export class ServicesComponent implements OnInit {
       height: "400px",
       panelClass: "price-list",
       autoFocus: false,
-      data: prices
+      data: prices,
     });
   }
 }

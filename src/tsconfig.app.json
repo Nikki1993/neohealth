@@ -8,8 +8,5 @@
       "core-js/es7/reflect": ["node_modules/core-js/proposals/reflect-metadata"]
     }
   },
-  "files": [
-    "main.ts",
-    "polyfills.ts"
-  ]
+  "files": ["main.ts", "polyfills.ts"]
 }

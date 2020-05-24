@@ -7,6 +7,6 @@ export const environment = {
     databaseURL: "https://neohealth-finland.firebaseio.com",
     projectId: "neohealth-finland",
     storageBucket: "neohealth-finland.appspot.com",
-    messagingSenderId: "894475704119"
-  }
- };
+    messagingSenderId: "894475704119",
+  },
+};

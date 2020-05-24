@@ -6,7 +6,8 @@
   z-index: 1000;
 }
 
-.navigation, .mat-toolbar {
+.navigation,
+.mat-toolbar {
   height: 64px;
 }
 
@@ -16,7 +17,7 @@
 }
 
 .logo-text {
-  font-family: 'Caveat', cursive;
+  font-family: "Caveat", cursive;
   font-size: 24px;
   align-self: center;
   padding-right: 10px;

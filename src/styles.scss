@@ -1,21 +1,21 @@
 /* You can add global styles to this file, and also import other style files */
 
-@import 'variables';
+@import "variables";
 
 .general-font {
-  font-family: 'Source Sans Pro', sans-serif;
+  font-family: "Source Sans Pro", sans-serif;
   font-weight: normal;
   font-style: normal;
 }
 
 .header-1 {
-  font-family: 'Playfair Display', serif;
+  font-family: "Playfair Display", serif;
   font-weight: 300;
   font-style: normal;
 }
 
 .header-2-3-4 {
-  font-family: 'Vollkorn', serif;
+  font-family: "Vollkorn", serif;
   font-weight: 300;
   font-style: normal;
 }
@@ -23,13 +23,13 @@
 .no-webp html,
 body {
   @extend .general-font;
-  background: url('/assets/background/bloom.png') repeat;
+  background: url("/assets/background/bloom.png") repeat;
 }
 
 .webp html,
 body {
   @extend .general-font;
-  background: url('/assets/background/bloom.webp') repeat;
+  background: url("/assets/background/bloom.webp") repeat;
 }
 
 h1 {
@@ -105,7 +105,7 @@ span {
 }
 
 .mat-button {
-  font-family: 'Vollkorn', serif;
+  font-family: "Vollkorn", serif;
   font-size: 16px;
 }
 

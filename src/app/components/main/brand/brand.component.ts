@@ -1,5 +1,5 @@
-import { Component, OnInit } from '@angular/core';
-import { TranslateService } from '@ngx-translate/core';
+import { Component, OnInit } from "@angular/core";
+import { TranslateService } from "@ngx-translate/core";
 
 interface ITranslationBrands {
   title?: string;
@@ -8,9 +8,9 @@ interface ITranslationBrands {
 }
 
 @Component({
-  selector: 'app-brands',
-  templateUrl: './brand.component.html',
-  styleUrls: ['./brand.component.scss']
+  selector: "app-brands",
+  templateUrl: "./brand.component.html",
+  styleUrls: ["./brand.component.scss"],
 })
 export class BrandComponent implements OnInit {
   values: ITranslationBrands = { images: [] };
@@ -18,15 +18,15 @@ export class BrandComponent implements OnInit {
   constructor(private translate: TranslateService) {}
 
   ngOnInit() {
-    this.translate.stream('brands').subscribe((values: ITranslationBrands) => {
+    this.translate.stream("brands").subscribe((values: ITranslationBrands) => {
       // @ts-ignore
-      Modernizr.on('webp', (result: any) => {
+      Modernizr.on("webp", (result: any) => {
         if (result && values.images) {
-          values.images = values.images.map(val => {
-            if (val.includes('.png')) {
-              return val.replace('.png', '.webp');
+          values.images = values.images.map((val) => {
+            if (val.includes(".png")) {
+              return val.replace(".png", ".webp");
             } else {
-              return val.replace('.jpg', '.webp');
+              return val.replace(".jpg", ".webp");
             }
           });
           this.values = values;

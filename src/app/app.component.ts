@@ -9,7 +9,7 @@ import { ServiceWorkerUpdateService } from "./services/service-worker-update.ser
 @Component({
   selector: "app-root",
   templateUrl: "./app.component.html",
-  styleUrls: ["./app.component.scss"]
+  styleUrls: ["./app.component.scss"],
 })
 export class AppComponent implements OnInit {
   state = "pending";
@@ -36,7 +36,7 @@ export class AppComponent implements OnInit {
   }
   ngOnInit() {
     const { browser } = this.deviceService.getDeviceInfo();
-    this.loading.subscribe(value => {
+    this.loading.subscribe((value) => {
       if (!value && browser === "ie") {
         this.warningDialog.open(WarningDialogComponent, {
           width: "400px",
@@ -44,13 +44,13 @@ export class AppComponent implements OnInit {
           data: {
             title: this.title,
             body: this.body,
-            icon: "assets/error.svg"
+            icon: "assets/error.svg",
           },
           role: "alertdialog",
           disableClose: true,
           panelClass: "panel-browser",
           backdropClass: "backdrop-browser",
-          autoFocus: false
+          autoFocus: false,
         });
       }
     });

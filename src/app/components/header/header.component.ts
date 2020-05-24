@@ -6,7 +6,7 @@ import { DomSanitizer } from "@angular/platform-browser";
 @Component({
   selector: "app-header",
   templateUrl: "./header.component.html",
-  styleUrls: ["./header.component.scss"]
+  styleUrls: ["./header.component.scss"],
 })
 export class HeaderComponent {
   appBar: [{}];
@@ -15,7 +15,7 @@ export class HeaderComponent {
   constructor(
     private translate: TranslateService,
     private matIconRegistery: MatIconRegistry,
-    private domSanitizer: DomSanitizer,
+    private domSanitizer: DomSanitizer
   ) {
     this.matIconRegistery.addSvgIcon(
       "facebook",

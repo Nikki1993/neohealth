@@ -1,15 +1,33 @@
-<div class="container" fxLayout="column" fxLayoutAlign="space-around center" fxFlexFill>
-  <img class="icon" [src]="data.icon" [alt]="data.icon">
+<div
+  class="container"
+  fxLayout="column"
+  fxLayoutAlign="space-around center"
+  fxFlexFill
+>
+  <img class="icon" [src]="data.icon" [alt]="data.icon" />
   <div fxLayout="column" fxLayoutAlign="center center">
-    <h2 mat-dialog-title>{{data.title}}</h2>
-    <mat-dialog-content>{{data.body}}</mat-dialog-content>
+    <h2 mat-dialog-title>{{ data.title }}</h2>
+    <mat-dialog-content>{{ data.body }}</mat-dialog-content>
   </div>
   <div class="browsers" fxLayout="row" fxLayoutAlign="space-around center">
-    <a href="https://www.google.com/chrome/" target="_blank" rel="noopener noreferrer">
-      <img src="assets/chrome.svg" alt="Google Chrome" width="96px" height="96px">
+    <a
+      href="https://www.google.com/chrome/"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      <img
+        src="assets/chrome.svg"
+        alt="Google Chrome"
+        width="96px"
+        height="96px"
+      />
     </a>
-    <a href="https://www.mozilla.org/en-US/firefox/new/" target="_blank" rel="noopener noreferrer">
-      <img src="assets/firefox.svg" alt="Firefox" width="96px" height="96px">
+    <a
+      href="https://www.mozilla.org/en-US/firefox/new/"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      <img src="assets/firefox.svg" alt="Firefox" width="96px" height="96px" />
     </a>
   </div>
   <button class="close_button" (click)="closeDialog()" mat-fab color="inherit">

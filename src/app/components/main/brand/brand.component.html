@@ -1,15 +1,24 @@
 <div fxLayout="column" fxLayoutAlign="center center" class="background">
-  <div class="content" fxLayout="row" fxLayout.lt-md="column" fxLayoutAlign="space-around center">
+  <div
+    class="content"
+    fxLayout="row"
+    fxLayout.lt-md="column"
+    fxLayoutAlign="space-around center"
+  >
     <div>
-      <h1>{{values.title}}</h1>
-      <p>{{values.description}}</p>
+      <h1>{{ values.title }}</h1>
+      <p>{{ values.description }}</p>
     </div>
     <div class="slideshow">
-      <slideshow [minHeight]="'200px'" [backgroundSize]="'250px'"
-                 [lazyLoad]="values.images.length > 1"
-                 [stopAutoPlayOnSlide]="false"
-                 [autoPlayWaitForLazyLoad]="true" [autoPlay]="true"
-                 [imageUrls]="values.images"></slideshow>
+      <slideshow
+        [minHeight]="'200px'"
+        [backgroundSize]="'250px'"
+        [lazyLoad]="values.images.length > 1"
+        [stopAutoPlayOnSlide]="false"
+        [autoPlayWaitForLazyLoad]="true"
+        [autoPlay]="true"
+        [imageUrls]="values.images"
+      ></slideshow>
     </div>
   </div>
 </div>

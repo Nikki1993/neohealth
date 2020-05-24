@@ -1,7 +1,7 @@
 @font-face {
   font-family: "Playfair Display";
   src: local("Playfair Display Regular"), local("PlayfairDisplay-Regular"),
-  url("/assets/fonts/subset-PlayfairDisplay-Regular.woff2") format("woff2");
+    url("/assets/fonts/subset-PlayfairDisplay-Regular.woff2") format("woff2");
   font-weight: normal;
   font-style: normal;
   font-display: swap;
@@ -10,7 +10,7 @@
 @font-face {
   font-family: "Source Sans Pro";
   src: local("Source Sans Pro Bold"), local("SourceSansPro-Bold"),
-  url("/assets/fonts/subset-SourceSansPro-Bold.woff2") format("woff2");
+    url("/assets/fonts/subset-SourceSansPro-Bold.woff2") format("woff2");
   font-weight: bold;
   font-style: normal;
   font-display: swap;
@@ -19,7 +19,7 @@
 @font-face {
   font-family: "Ubuntu Mono";
   src: local("Ubuntu Mono Bold"), local("UbuntuMono-Bold"),
-  url("/assets/fonts/subset-UbuntuMono-Bold.woff2") format("woff2");
+    url("/assets/fonts/subset-UbuntuMono-Bold.woff2") format("woff2");
   font-weight: bold;
   font-style: normal;
   font-display: swap;
@@ -28,7 +28,7 @@
 @font-face {
   font-family: "Source Sans Pro";
   src: local("Source Sans Pro Regular"), local("SourceSansPro-Regular"),
-  url("/assets/fonts/subset-SourceSansPro-Regular.woff2") format("woff2");
+    url("/assets/fonts/subset-SourceSansPro-Regular.woff2") format("woff2");
   font-weight: normal;
   font-style: normal;
   font-display: swap;
@@ -37,7 +37,7 @@
 @font-face {
   font-family: "Raleway";
   src: local("Raleway Bold"), local("Raleway-Bold"),
-  url("/assets/fonts/subset-Raleway-Bold.woff2") format("woff2");
+    url("/assets/fonts/subset-Raleway-Bold.woff2") format("woff2");
   font-weight: bold;
   font-style: normal;
   font-display: swap;
@@ -46,7 +46,7 @@
 @font-face {
   font-family: "Ubuntu Mono";
   src: local("Ubuntu Mono"), local("UbuntuMono-Regular"),
-  url("/assets/fonts/subset-UbuntuMono-Regular.woff2") format("woff2");
+    url("/assets/fonts/subset-UbuntuMono-Regular.woff2") format("woff2");
   font-weight: normal;
   font-style: normal;
   font-display: swap;
@@ -55,7 +55,7 @@
 @font-face {
   font-family: "Caveat";
   src: local("Caveat Bold"), local("Caveat-Bold"),
-  url("/assets/fonts/subset-Caveat-Bold.woff2") format("woff2");
+    url("/assets/fonts/subset-Caveat-Bold.woff2") format("woff2");
   font-weight: bold;
   font-style: normal;
   font-display: swap;
@@ -64,7 +64,7 @@
 @font-face {
   font-family: "Caveat";
   src: local("Caveat Regular"), local("Caveat-Regular"),
-  url("/assets/fonts/subset-Caveat-Regular.woff2") format("woff2");
+    url("/assets/fonts/subset-Caveat-Regular.woff2") format("woff2");
   font-weight: normal;
   font-style: normal;
   font-display: swap;
@@ -73,7 +73,7 @@
 @font-face {
   font-family: "Vollkorn";
   src: local("Vollkorn Bold"), local("Vollkorn-Bold"),
-  url("/assets/fonts/subset-Vollkorn-Bold.woff2") format("woff2");
+    url("/assets/fonts/subset-Vollkorn-Bold.woff2") format("woff2");
   font-weight: bold;
   font-style: normal;
   font-display: swap;
@@ -82,7 +82,7 @@
 @font-face {
   font-family: "Raleway";
   src: local("Raleway"), local("Raleway-Regular"),
-  url("/assets/fonts/subset-Raleway-Regular.woff2") format("woff2");
+    url("/assets/fonts/subset-Raleway-Regular.woff2") format("woff2");
   font-weight: normal;
   font-style: normal;
   font-display: swap;
@@ -91,7 +91,7 @@
 @font-face {
   font-family: "Playfair Display";
   src: local("Playfair Display Bold"), local("PlayfairDisplay-Bold"),
-  url("/assets/fonts/subset-PlayfairDisplay-Bold.woff2") format("woff2");
+    url("/assets/fonts/subset-PlayfairDisplay-Bold.woff2") format("woff2");
   font-weight: bold;
   font-style: normal;
   font-display: swap;
@@ -100,24 +100,23 @@
 @font-face {
   font-family: "Vollkorn";
   src: local("Vollkorn Regular"), local("Vollkorn-Regular"),
-  url("/assets/fonts/subset-Vollkorn-Regular.woff2") format("woff2");
+    url("/assets/fonts/subset-Vollkorn-Regular.woff2") format("woff2");
   font-weight: normal;
   font-style: normal;
   font-display: swap;
 }
 
 @font-face {
-  font-family: 'Material Icons';
+  font-family: "Material Icons";
   font-style: normal;
   font-weight: 400;
   font-display: swap;
-  src: local('Material Icons'),
-  local('MaterialIcons-Regular'),
-  url(/assets/fonts/material-icons.woff2) format('woff2')
+  src: local("Material Icons"), local("MaterialIcons-Regular"),
+    url(/assets/fonts/material-icons.woff2) format("woff2");
 }
 
 .material-icons {
-  font-family: 'Material Icons';
+  font-family: "Material Icons";
   font-weight: normal;
   font-style: normal;
   font-size: 24px; /* Preferred icon size */
@@ -138,5 +137,5 @@
   -moz-osx-font-smoothing: grayscale;
 
   /* Support for IE. */
-  font-feature-settings: 'liga';
+  font-feature-settings: "liga";
 }

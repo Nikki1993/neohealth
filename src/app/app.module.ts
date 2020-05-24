@@ -28,6 +28,7 @@ import { BrandComponent } from "./components/main/brand/brand.component";
 import { AboutComponent } from "./components/main/about/about.component";
 import { PriceDialogComponent } from "./components/price-dialog/price-dialog.component";
 import { ContactComponent } from "./components/main/contact/contact.component";
+import { CovidComponent } from "./components/main/covid/covid.component";
 
 import "firebase/performance";
 
@@ -43,6 +44,7 @@ import "firebase/performance";
     AboutComponent,
     PriceDialogComponent,
     ContactComponent,
+    CovidComponent,
   ],
   imports: [
     BrowserModule,

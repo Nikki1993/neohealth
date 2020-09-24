@@ -10,15 +10,16 @@
       <p>{{ values.description }}</p>
     </div>
     <div class="slideshow">
-      <slideshow
-        [minHeight]="'200px'"
-        [backgroundSize]="'250px'"
-        [lazyLoad]="values.images.length > 1"
-        [stopAutoPlayOnSlide]="false"
-        [autoPlayWaitForLazyLoad]="true"
-        [autoPlay]="true"
-        [imageUrls]="values.images"
-      ></slideshow>
+      <ng-image-slider [images]="values.images" [imagePopup]="false" [manageImageRatio]="true" [autoSlide]="true" [infinite]="true"></ng-image-slider>
+<!--      <slideshow-->
+<!--        [minHeight]="'200px'"-->
+<!--        [backgroundSize]="'250px'"-->
+<!--        [lazyLoad]="values.images.length > 1"-->
+<!--        [stopAutoPlayOnSlide]="false"-->
+<!--        [autoPlayWaitForLazyLoad]="true"-->
+<!--        [autoPlay]="true"-->
+<!--        [imageUrls]="values.images"-->
+<!--      ></slideshow>-->
     </div>
   </div>
 </div>

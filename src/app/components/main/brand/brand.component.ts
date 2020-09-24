@@ -13,26 +13,26 @@ interface ITranslationBrands {
   styleUrls: ["./brand.component.scss"],
 })
 export class BrandComponent implements OnInit {
-  values: ITranslationBrands = { images: [] };
+  values: {title?: string; description?: string; images?: Array<{image: string; thumbImage: string; alt: string; title: string}>} = {};
 
   constructor(private translate: TranslateService) {}
 
   ngOnInit() {
-    this.translate.stream("brands").subscribe((values: ITranslationBrands) => {
+    this.translate.stream("brands").subscribe(({ title, description, images }: ITranslationBrands) => {
       // @ts-ignore
       Modernizr.on("webp", (result: any) => {
-        if (result && values.images) {
-          values.images = values.images.map((val) => {
+        if (result && images) {
+          images = images.map((val) => {
             if (val.includes(".png")) {
               return val.replace(".png", ".webp");
             } else {
               return val.replace(".jpg", ".webp");
             }
           });
-          this.values = values;
-        } else {
-          this.values = values;
         }
+        this.values = { title, description, images: images.reduce((acc, val) => {
+            return [...acc, { image: val, thumbImage: val, title: null, alt: null }];
+          }, [])};
       });
     });
   }

@@ -1,4 +1,3 @@
-import { HttpClientModule } from "@angular/common/http";
 import { NgModule } from "@angular/core";
 import { FlexLayoutModule } from "@angular/flex-layout";
 import { BrowserModule } from "@angular/platform-browser";
@@ -10,10 +9,10 @@ import {
   AngularFirestoreModule,
   SETTINGS,
 } from "@angular/fire/firestore";
-import { AngularFirePerformanceModule } from "@angular/fire/performance";
-import { DeviceDetectorModule } from "ngx-device-detector";
-import { SlideshowModule } from "ng-simple-slideshow";
+import { AngularFirePerformanceModule, PerformanceMonitoringService } from '@angular/fire/performance';
+import { NgImageSliderModule } from 'ng-image-slider';
 import { ServiceWorkerModule } from "@angular/service-worker";
+import { HttpClientModule } from '@angular/common/http';
 
 import { environment } from "../environments/environment";
 import { AppComponent } from "./app.component";
@@ -28,9 +27,6 @@ import { BrandComponent } from "./components/main/brand/brand.component";
 import { AboutComponent } from "./components/main/about/about.component";
 import { PriceDialogComponent } from "./components/price-dialog/price-dialog.component";
 import { ContactComponent } from "./components/main/contact/contact.component";
-import { CovidComponent } from "./components/main/covid/covid.component";
-
-import "firebase/performance";
 
 @NgModule({
   declarations: [
@@ -44,20 +40,18 @@ import "firebase/performance";
     AboutComponent,
     PriceDialogComponent,
     ContactComponent,
-    CovidComponent,
   ],
   imports: [
     BrowserModule,
     HttpClientModule,
+    NgImageSliderModule,
     ServiceWorkerModule.register("/ngsw-worker.js", {
       enabled: environment.production,
     }),
     BrowserAnimationsModule,
     NeohealthMaterialModule,
     FlexLayoutModule,
-    DeviceDetectorModule.forRoot(),
     AngularFireModule.initializeApp(environment.firebase),
-    AngularFirestoreModule.enablePersistence(),
     AngularFirePerformanceModule,
     TranslateModule.forRoot({
       loader: {
@@ -66,10 +60,9 @@ import "firebase/performance";
         deps: [AngularFirestore],
       },
     }),
-    SlideshowModule,
   ],
   entryComponents: [WarningDialogComponent, PriceDialogComponent],
-  providers: [AngularFirestore, { provide: SETTINGS, useValue: {} }],
+  providers: [AngularFirestore, { provide: SETTINGS, useValue: {} }, PerformanceMonitoringService],
   bootstrap: [AppComponent],
 })
 export class AppModule {}

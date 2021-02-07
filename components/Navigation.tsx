@@ -1,6 +1,7 @@
 import { FC, MouseEvent } from "react";
 import { Button, Color } from "@components/Button";
 import { Menu } from "@components/Menu";
+import { Logo } from "@components/Logo";
 
 export const Navigation: FC<{}> = () => {
   const onLanguageChange = (e: MouseEvent<HTMLButtonElement>) => {
@@ -8,13 +9,10 @@ export const Navigation: FC<{}> = () => {
   };
 
   return (
-    <div className="relative p-6">
+    <div className="relative pt-6 pb-16 sm:pb-24">
       <div className="max-w-7xl mx-auto px-4 sm:px-6">
         <nav className="relative flex items-center justify-between">
-          <h5 className="logo text-xl">
-            <span className="block text-indigo-600 inline">Neo</span>
-            <span className="block inline">Health</span>
-          </h5>
+          <Logo />
           <Menu />
           <Button
             accessibilityString="Change Language"

@@ -1,0 +1,53 @@
+import { FC, MouseEvent, useState } from "react";
+import { Transition } from "@headlessui/react";
+
+import { Button } from "@components/Button";
+import { MenuItems } from "@components/MenuItems";
+
+interface MenuProps {}
+
+export const Menu: FC<MenuProps> = () => {
+  const [isOpen, setState] = useState(false);
+
+  const onClick = (e: MouseEvent<HTMLButtonElement>) => {
+    e.preventDefault();
+    setState(true);
+  };
+
+  return (
+    <>
+      <Transition
+        show={isOpen}
+        enter="transition-opacity duration-75"
+        enterFrom="opacity-0"
+        enterTo="opacity-100"
+        leave="transition-opacity duration-150"
+        leaveFrom="opacity-100"
+        leaveTo="opacity-0"
+      >
+        <div className="absolute top-0 inset-x-0 p-2 rounded-lg shadow-md bg-white ring-1 ring-black ring-opacity-5 overflow-hidden"></div>
+      </Transition>
+      <MenuItems />
+      <Button
+        accessibilityString="Open Main Menu"
+        className="md:hidden"
+        onClick={onClick}
+      >
+        <svg
+          className="w-6 h-6"
+          fill="none"
+          stroke="currentColor"
+          viewBox="0 0 24 24"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            strokeWidth={2}
+            d="M4 6h16M4 12h16M4 18h16"
+          />
+        </svg>
+      </Button>
+    </>
+  );
+};

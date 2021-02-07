@@ -1,10 +1,32 @@
 import { FC, HTMLProps, MouseEvent } from "react";
 
 interface ButtonProps extends HTMLProps<HTMLButtonElement> {
-  color: "primary" | "secondary" | "danger";
+  className?: string;
+  accessibilityString: string;
+  color?: Color;
   onClick: (e: MouseEvent<HTMLButtonElement>) => void;
 }
 
-export const Button: FC<ButtonProps> = ({ color, onClick, children }) => {
-  return <button onClick={onClick}>{children}</button>;
+export enum Color {
+  Primary = "text-indigo-600 bg-white shadow",
+  Secondary = "text-white bg-indigo-600 shadow",
+  Danger = "text-white bg-red-600 shadow",
+}
+
+export const Button: FC<ButtonProps> = ({
+  color = "",
+  onClick,
+  children,
+  accessibilityString,
+  className = "",
+}) => {
+  return (
+    <button
+      className={`items-center px-4 py-2 border border-transparent text-base font-medium rounded-md ${color} ${className}`}
+      onClick={onClick}
+    >
+      <span className="sr-only">{accessibilityString}</span>
+      {children}
+    </button>
+  );
 };

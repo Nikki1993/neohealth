@@ -1,11 +1,16 @@
-import { FC, MouseEvent } from "react";
+import { FC, MouseEvent, useState } from "react";
+import { Transition } from "@headlessui/react";
+
 import { Button, Color } from "@components/Button";
 import { Menu } from "@components/Menu";
 import { Logo } from "@components/Logo";
+import { LanguagePicker } from "@components/LanguagePicker";
 
 export const Navigation: FC<{}> = () => {
+  const [isOpen, setOpen] = useState(false);
   const onLanguageChange = (e: MouseEvent<HTMLButtonElement>) => {
     e.preventDefault();
+    setOpen(true);
   };
 
   return (
@@ -22,6 +27,17 @@ export const Navigation: FC<{}> = () => {
           >
             <span>Language</span>
           </Button>
+          <Transition
+            show={isOpen}
+            enter="transition-opacity duration-75"
+            enterFrom="opacity-0"
+            enterTo="opacity-100"
+            leave="transition-opacity duration-150"
+            leaveFrom="opacity-100"
+            leaveTo="opacity-0"
+          >
+            <LanguagePicker />
+          </Transition>
         </nav>
       </div>
     </div>

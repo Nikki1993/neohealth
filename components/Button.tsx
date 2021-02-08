@@ -4,6 +4,7 @@ interface ButtonProps extends HTMLProps<HTMLButtonElement> {
   className?: string;
   accessibilityString: string;
   color?: Color;
+  hasPadding?: boolean;
   onClick: (e: MouseEvent<HTMLButtonElement>) => void;
 }
 
@@ -18,11 +19,14 @@ export const Button: FC<ButtonProps> = ({
   onClick,
   children,
   accessibilityString,
+  hasPadding = true,
   className = "",
 }) => {
   return (
     <button
-      className={`items-center px-4 py-2 border border-transparent text-base font-medium rounded-md ${color} ${className}`}
+      className={`items-center ${
+        hasPadding && "px-4 py-2"
+      } border border-transparent text-base font-medium rounded-md ${color} ${className}`.trim()}
       onClick={onClick}
     >
       <span className="sr-only">{accessibilityString}</span>

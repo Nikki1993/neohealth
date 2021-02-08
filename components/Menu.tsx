@@ -30,30 +30,29 @@ export const Menu: FC<MenuProps> = () => {
         leave="transition-opacity duration-150"
         leaveFrom="opacity-100"
         leaveTo="opacity-0"
+        className="absolute top-0 inset-x-0 transition transform origin-top-right"
       >
-        <div className="absolute top-0 inset-x-0 transition transform origin-top-right">
-          <div className="rounded-lg -m-2 p-2 shadow-md bg-white ring-1 ring-black ring-opacity-5 overflow-hidden">
-            <div className="flex items-center justify-between">
-              <Logo />
-              <Button accessibilityString="Close Menu" onClick={onClose}>
-                <svg
-                  className="w-6 h-6"
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M6 18L18 6M6 6l12 12"
-                  />
-                </svg>
-              </Button>
-            </div>
-            <MenuItems isHidden={false} orientation="vertical" />
+        <div className="rounded-lg -m-2 p-2 shadow-md bg-white ring-1 ring-black ring-opacity-5 overflow-hidden">
+          <div className="flex items-center justify-between">
+            <Logo />
+            <Button accessibilityString="Close Menu" onClick={onClose}>
+              <svg
+                className="w-6 h-6"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d="M6 18L18 6M6 6l12 12"
+                />
+              </svg>
+            </Button>
           </div>
+          <MenuItems isHidden={false} orientation="vertical" />
         </div>
       </Transition>
       <MenuItems />

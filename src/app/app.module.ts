@@ -29,40 +29,39 @@ import { PriceDialogComponent } from "./components/price-dialog/price-dialog.com
 import { ContactComponent } from "./components/main/contact/contact.component";
 
 @NgModule({
-  declarations: [
-    AppComponent,
-    WarningDialogComponent,
-    HeaderComponent,
-    MainComponent,
-    HomeComponent,
-    ServicesComponent,
-    BrandComponent,
-    AboutComponent,
-    PriceDialogComponent,
-    ContactComponent,
-  ],
-  imports: [
-    BrowserModule,
-    HttpClientModule,
-    NgImageSliderModule,
-    ServiceWorkerModule.register("/ngsw-worker.js", {
-      enabled: environment.production,
-    }),
-    BrowserAnimationsModule,
-    NeohealthMaterialModule,
-    FlexLayoutModule,
-    AngularFireModule.initializeApp(environment.firebase),
-    AngularFirePerformanceModule,
-    TranslateModule.forRoot({
-      loader: {
-        provide: TranslateLoader,
-        useFactory: StoreTransLoader,
-        deps: [AngularFirestore],
-      },
-    }),
-  ],
-  entryComponents: [WarningDialogComponent, PriceDialogComponent],
-  providers: [AngularFirestore, { provide: SETTINGS, useValue: {} }, PerformanceMonitoringService],
-  bootstrap: [AppComponent],
+    declarations: [
+        AppComponent,
+        WarningDialogComponent,
+        HeaderComponent,
+        MainComponent,
+        HomeComponent,
+        ServicesComponent,
+        BrandComponent,
+        AboutComponent,
+        PriceDialogComponent,
+        ContactComponent,
+    ],
+    imports: [
+        BrowserModule,
+        HttpClientModule,
+        NgImageSliderModule,
+        ServiceWorkerModule.register("/ngsw-worker.js", {
+            enabled: environment.production,
+        }),
+        BrowserAnimationsModule,
+        NeohealthMaterialModule,
+        FlexLayoutModule,
+        AngularFireModule.initializeApp(environment.firebase),
+        AngularFirePerformanceModule,
+        TranslateModule.forRoot({
+            loader: {
+                provide: TranslateLoader,
+                useFactory: StoreTransLoader,
+                deps: [AngularFirestore],
+            },
+        }),
+    ],
+    providers: [AngularFirestore, { provide: SETTINGS, useValue: {} }, PerformanceMonitoringService],
+    bootstrap: [AppComponent]
 })
 export class AppModule {}

@@ -1,4 +1,4 @@
-import { AngularFirestore } from "@angular/fire/firestore";
+import { AngularFirestore } from "@angular/fire/compat/firestore";
 import { TranslateLoader } from "@ngx-translate/core";
 
 export class FirebaseTransLoader implements TranslateLoader {

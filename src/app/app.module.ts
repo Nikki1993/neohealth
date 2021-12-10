@@ -3,16 +3,15 @@ import { FlexLayoutModule } from "@angular/flex-layout";
 import { BrowserModule } from "@angular/platform-browser";
 import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
 import { TranslateLoader, TranslateModule } from "@ngx-translate/core";
-import { AngularFireModule } from "@angular/fire";
+import { AngularFireModule } from "@angular/fire/compat";
+import { AngularFirestore, SETTINGS } from "@angular/fire/compat/firestore";
 import {
-  AngularFirestore,
-  AngularFirestoreModule,
-  SETTINGS,
-} from "@angular/fire/firestore";
-import { AngularFirePerformanceModule, PerformanceMonitoringService } from '@angular/fire/performance';
-import { NgImageSliderModule } from 'ng-image-slider';
+  AngularFirePerformanceModule,
+  PerformanceMonitoringService,
+} from "@angular/fire/compat/performance";
+import { NgImageSliderModule } from "ng-image-slider";
 import { ServiceWorkerModule } from "@angular/service-worker";
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClientModule } from "@angular/common/http";
 
 import { environment } from "../environments/environment";
 import { AppComponent } from "./app.component";
@@ -29,39 +28,43 @@ import { PriceDialogComponent } from "./components/price-dialog/price-dialog.com
 import { ContactComponent } from "./components/main/contact/contact.component";
 
 @NgModule({
-    declarations: [
-        AppComponent,
-        WarningDialogComponent,
-        HeaderComponent,
-        MainComponent,
-        HomeComponent,
-        ServicesComponent,
-        BrandComponent,
-        AboutComponent,
-        PriceDialogComponent,
-        ContactComponent,
-    ],
-    imports: [
-        BrowserModule,
-        HttpClientModule,
-        NgImageSliderModule,
-        ServiceWorkerModule.register("/ngsw-worker.js", {
-            enabled: environment.production,
-        }),
-        BrowserAnimationsModule,
-        NeohealthMaterialModule,
-        FlexLayoutModule,
-        AngularFireModule.initializeApp(environment.firebase),
-        AngularFirePerformanceModule,
-        TranslateModule.forRoot({
-            loader: {
-                provide: TranslateLoader,
-                useFactory: StoreTransLoader,
-                deps: [AngularFirestore],
-            },
-        }),
-    ],
-    providers: [AngularFirestore, { provide: SETTINGS, useValue: {} }, PerformanceMonitoringService],
-    bootstrap: [AppComponent]
+  declarations: [
+    AppComponent,
+    WarningDialogComponent,
+    HeaderComponent,
+    MainComponent,
+    HomeComponent,
+    ServicesComponent,
+    BrandComponent,
+    AboutComponent,
+    PriceDialogComponent,
+    ContactComponent,
+  ],
+  imports: [
+    BrowserModule,
+    HttpClientModule,
+    NgImageSliderModule,
+    ServiceWorkerModule.register("/ngsw-worker.js", {
+      enabled: environment.production,
+    }),
+    BrowserAnimationsModule,
+    NeohealthMaterialModule,
+    FlexLayoutModule,
+    AngularFireModule.initializeApp(environment.firebase),
+    AngularFirePerformanceModule,
+    TranslateModule.forRoot({
+      loader: {
+        provide: TranslateLoader,
+        useFactory: StoreTransLoader,
+        deps: [AngularFirestore],
+      },
+    }),
+  ],
+  providers: [
+    AngularFirestore,
+    { provide: SETTINGS, useValue: {} },
+    PerformanceMonitoringService,
+  ],
+  bootstrap: [AppComponent],
 })
 export class AppModule {}

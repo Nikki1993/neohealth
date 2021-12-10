@@ -48,10 +48,10 @@
             fxLayout="row"
             fxLayoutGap="10px"
             fxLayoutAlign="start center"
+            (click)="openLink(item.link)"
           >
             <div class="action-icon">
               <mat-icon
-                (click)="openLink(item.link)"
                 inline
                 [svgIcon]="item.name"
               ></mat-icon>

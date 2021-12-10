@@ -1,5 +1,5 @@
 // Import material theming functions
-@use '~@angular/material' as mat;
+@use '@angular/material' as mat;
 
 // Copy the palettes from your selected theme (usually theme.scss).
 $app-primary: mat.define-palette(mat.$blue-gray-palette);

@@ -185,8 +185,4 @@
     }
   },
   "defaultProject": "angular-neohealth",
-  "cli": {
-    "packageManager": "yarn",
-    "analytics": "b577a5f3-206e-4bc9-93bc-232fae36c076"
-  }
 }

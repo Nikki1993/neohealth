@@ -11,7 +11,7 @@
     "lint": "ng lint",
     "e2e": "ng e2e",
     "deploy": "yarn run build && firebase deploy",
-    "profile": "ng build --configuration production --namedChunks=true --stats-json && webpack-bundle-analyzer dist/stats-es2015.json"
+    "profile": "npm run build --namedChunks=true --stats-json && webpack-bundle-analyzer dist/stats.json"
   },
   "private": true,
   "dependencies": {

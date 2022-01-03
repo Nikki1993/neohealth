@@ -22,8 +22,7 @@
         "@schematics/angular:guard": {
           "skipTests": true
         },
-        "@schematics/angular:module": {
-        },
+        "@schematics/angular:module": {},
         "@schematics/angular:pipe": {
           "skipTests": true
         },
@@ -149,6 +148,15 @@
               "src/manifest.json"
             ]
           }
+        },
+        "lint": {
+          "builder": "@angular-eslint/builder:lint",
+          "options": {
+            "lintFilePatterns": [
+              "src/**/*.ts",
+              "src/**/*.html"
+            ]
+          }
         }
       }
     },
@@ -167,4 +175,7 @@
     }
   },
   "defaultProject": "angular-neohealth",
+  "cli": {
+    "defaultCollection": "@angular-eslint/schematics"
+  }
 }
